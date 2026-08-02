@@ -1,0 +1,48 @@
+# ABL Space Systems
+
+> ABL Space Systems is an American launch vehicle company founded in 2017 by Harry O'Hanley and Dan Piemont, headquartered in El Segundo, California. ABL built RS1, a two-stage kerosene/liquid-oxygen small satellite launch vehicle rated at 1,350 kg to low Earth orbit and 1,000 kg to sun-synchronous orbit, powered by nine in-house additively manufactured E2 engines on the first stage and one on the second, together with GS0, a containerized ground system that packages an entire orbital launch site into standard shipping containers. RS1 flew once, from Pacific Spaceport Complex Kodiak in January 2023, and was lost shortly after liftoff; a second vehicle was destroyed during preflight static-fire testing in July 2024. The company exited the commercial orbital launch market in November 2024 and rebranded as Long Wall in February 2025, refocusing on containerized missile defense — the Cyclops exoatmospheric interceptor, RSX low-cost liquid boosters for flight testing and threat replication, and the Ironwood ground support equipment line.
+
+## API surface
+
+ABL Space Systems / Long Wall is an aerospace and defense hardware manufacturer. As of 2026-08-02 it publishes **no** public API, developer portal, SDK, CLI, machine-readable API contract (OpenAPI/AsyncAPI/GraphQL/gRPC), MCP server or A2A agent card. Contract discovery was run against every known host — `ablspacesystems.com`, `www.lwall.com`, and candidate `api.`/`developer.`/`docs.` subdomains (none resolve) — covering `/openapi.json`, `/openapi.yaml`, `/swagger.json`, `/api-docs`, `/docs`, `/llms.txt` and the full `/.well-known/` surface. All returned 404 or a site 404 redirect. No GitHub organization exists under `ablspacesystems`, `abl-space-systems`, `longwall` or `lwall`.
+
+## Company
+
+- [ABL Space Systems](https://ablspacesystems.com/): Legacy company website, still live and serving the RS1/GS0 product pages.
+- [Long Wall](https://www.lwall.com/): Successor company website after the February 2025 rebrand.
+- [Company](https://ablspacesystems.com/company/): Mission, facilities in El Segundo, Long Beach, Mojave and Seattle.
+- [Careers](https://ablspacesystems.com/careers/): ABL open roles.
+- [Long Wall careers](https://jobs.lever.co/longwall): Current open roles under the Long Wall brand.
+
+## Products
+
+- [RS1](https://ablspacesystems.com/rs1/): Small satellite launch vehicle — 1,350 kg to LEO, 1,000 kg to SSO, 9x E2 engines on stage one, 1x E2 on stage two, stages sized to standard shipping containers.
+- [GS0](https://ablspacesystems.com/gs0/): Fully containerized ground/launch system deployable to any flat concrete pad by land, sea or air.
+- Cyclops (Long Wall): Mass-producible exoatmospheric interceptor.
+- RSX (Long Wall): Low-cost liquid boosters for flight testing and threat replication, derived from RS1.
+- Ironwood (Long Wall): Modern ground support equipment with command-and-control, power and comms.
+
+## News and writing
+
+- [ABL news](https://ablspacesystems.com/news/) ([RSS](https://ablspacesystems.com/feed/))
+- [ABL Space blog on Substack](https://ablspace.substack.com/) ([RSS](https://ablspace.substack.com/feed))
+- [Long Wall news](https://www.lwall.com/news)
+
+## Legal and contact
+
+- [Terms & Conditions](https://ablspacesystems.com/terms-conditions/)
+- [Privacy Policy](https://ablspacesystems.com/privacy-policy/)
+- General inquiries: hi@ablspacesystems.com
+- Career inquiries: jobs@ablspacesystems.com
+- Booking inquiries: missions@ablspacesystems.com
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/abl-space-systems/refs/heads/main/apis.yml): APIs.json 0.20 index for this company.
+- well-known/abl-space-systems-well-known.yml: Probed `/.well-known/` and contract-discovery results (all negative).
+- security/abl-space-systems-domain-security.yml: Probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture for ablspacesystems.com and lwall.com.
+
+---
+generated: 2026-08-02
+method: generated
+source: apis.yml + https://ablspacesystems.com/ + https://www.lwall.com/

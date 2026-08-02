@@ -1,0 +1,85 @@
+generated: '2026-08-02'
+method: probed
+source: https://ablspacesystems.com/ + https://www.lwall.com/
+note: >-
+  Probed the full /.well-known/ discovery surface on both the legacy ABL Space Systems
+  site and the successor Long Wall site. Nothing is published. ABL/Long Wall is an
+  aerospace and defense hardware manufacturer with no developer-facing API surface,
+  so an empty well-known result is the expected, honest outcome.
+hosts:
+- host: https://ablspacesystems.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://www.lwall.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery run against every known host. No OpenAPI, Swagger,
+    GraphQL, MCP or A2A surface exists. No agent card was found, so no a2a/ artifact
+    was written (search-only artifact).
+  probes:
+  - host: https://ablspacesystems.com
+    paths:
+      /openapi.json: 404
+      /openapi.yaml: 404
+      /swagger.json: 404
+      /api-docs: 404
+      /docs: 404
+      /api: 404
+      /llms.txt: 404
+      /robots.txt: 200
+      /sitemap.xml: 301
+  - host: https://www.lwall.com
+    paths:
+      /openapi.json: 307
+      /openapi.yaml: 307
+      /swagger.json: 307
+      /api-docs: 307
+      /docs: 307
+      /api: 307
+      /llms.txt: 307
+      /robots.txt: 200
+      /sitemap.xml: 200
+    note: >-
+      Every unknown path on www.lwall.com answers 307 (Next.js redirect to the site
+      404 handler) — no JSON body, no spec. The published sitemap and robots.txt both
+      still emit http://localhost:3000 URLs, a build-configuration defect on the
+      provider side.
+  github_org:
+    searched: true
+    result: none
+    note: >-
+      GitHub org probes for ablspacesystems, abl-space-systems, longwall and lwall
+      all returned 404; GitHub user/org search returned 0 results. No published
+      .proto, SDK or spec repository.
