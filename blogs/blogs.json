@@ -1,0 +1,21 @@
+{
+  "repo": "abl-space-systems",
+  "feeds": [
+    {
+      "source": "https://ablspacesystems.com/gs0/",
+      "feed_url": "https://ablspacesystems.com/gs0/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    },
+    {
+      "source": "https://ablspace.substack.com/",
+      "feed_url": "https://blog.ablspacesystems.com/feed",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-06T14:08:46Z"
+}
