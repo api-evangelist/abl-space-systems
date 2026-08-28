@@ -18,6 +18,17 @@ description: 'ABL Space Systems is an American launch vehicle company founded in
   Wall is an aerospace and defense hardware manufacturer: it publishes no public developer
   API, SDK, machine-readable API contract or developer portal.'
 url: https://raw.githubusercontent.com/api-evangelist/abl-space-systems/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://ablspacesystems.com/wp-content/uploads/2022/06/RS1-hp-1.jpg
 x-type: company
 x-source: harvest:secondary-market
